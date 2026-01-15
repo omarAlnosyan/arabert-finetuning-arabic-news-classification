@@ -7,56 +7,35 @@ Fine-tuned AraBERT model for classifying Arabic news articles into 7 categories 
 ## 🎯 Overview
 
 Classifies Arabic news into:
-- Sports
-- Politics  
-- Finance
-- Medical
-- Tech
-- Culture
-- Religion
+- Sports | رياضة
+- Politics | سياسة
+- Finance | اقتصاد
+- Medical | طب
+- Tech | تكنولوجيا
+- Culture | ثقافة
+- Religion | دين
 
 ---
 
 ## 📊 Performance
 
 - **Accuracy**: 95%+
-- **Dataset**: 45,500 Arabic articles
-- **Training Time**: 35 minutes (T4 GPU)
-- **Epochs**: 3
-
----
-
-## 📦 Requirements
-
-- Python 3.8+
-- PyTorch
-- Transformers
-- Datasets
-
----
-
-## 📂 Files
-
-- `fine-tuning-news_classfction.ipynb` - Complete training notebook
-- `best_arabert_model.pt` - Trained model weights
-- `README.md` - Documentation
+- **Dataset**: 45,500 Arabic articles (SANAD)
+- **Training Time**: 35 minutes on T4 GPU
+- **Base Model**: AraBERT v2
 
 ---
 
 ## 🚀 How to Use
 
-1. Install dependencies
-2. Load the notebook in Google Colab
-3. Run all cells
-4. Use the model for predictions
+### Step 1: Open in Colab
 
-Full instructions in the notebook.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR-USERNAME/arabert-finetuning-arabic-news/blob/main/fine-tuning-news_classfction.ipynb)
 
----
+### Step 2: Run All Cells
 
-## 🙏 Acknowledgments
-
-- **Model**: [AraBERT v2](https://github.com/aub-mind/arabert)
-- **Dataset**: [SANAD Arabic News](https://huggingface.co/datasets/Hamza1001/sanad)
-- **Framework**: Hugging Face Transformers
-
+The notebook will:
+1. Download the SANAD dataset
+2. Fine-tune AraBERT (3 epochs, ~35 mins)
+3. Save the trained model
+4. Test on example
